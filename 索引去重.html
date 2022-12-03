@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var arr = ['aa','bb','cc','dd','aa']
+        // console.log(arr.indexOf('aa'));     //aa 的第一个索引
+        // console.log(arr.lastIndexOf('aa')); // aa 的最后一个索引
+
+        
+        function unique(arr){
+            var newArr = [];
+            for(var i =0 ; i < arr.length ;i++){
+                if(newArr.indexOf(arr[i]) === -1){
+                    newArr.push(arr[i]);
+                }
+            }
+            return newArr;
+        }
+        var demo = unique(['tt','qq','ww','ff','ff','ww','ww','cc','dd','cc','aa']);
+        var demo2 = unique(['AA','CC','AA']);
+        var ss = demo.sort();
+
+        console.log(ss);
+    </script>
+    
+
+</head>
+<body>
+    
+</body>
+</html>
