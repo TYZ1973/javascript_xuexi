@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var arr = [1,2,3,4,5];
+        var arr2 =['aa','bb','cc','dd'];
+
+
+        var arr3 = new Array();  //创建空数组
+        var arr4 = new Array(4,5)//这种方法相当于 var arr4 = [4,5]
+
+        //是否为数组的检测方法 用 arr1 instanceof Array  , 是就是true 不是就是 flase
+        //方法2                  Array instanceof(arr2)
+        console.log(arr instanceof Array);
+
+        console.log(Array instanceof(arr2));
+
+        if(Array instanceof(arr2)){
+
+            return '以上可以添加某些运算过程 比如求最大值 然后return运算结果在这里'
+        }else{
+            return 'error 不是数组'
+        }
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

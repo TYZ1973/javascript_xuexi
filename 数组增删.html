@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var arr = [1,2,3,4,5,6];
+        var arr1 = ['aa','bb','cc','dd','ee'];
+        var arr2 = ['1a','2b','3c','4d'];
+        var arr3 = [11,22,33,44,55];
+        
+        
+        console.log(arr.push(7,'tt'));  //数组 尾部添加元素 返回长度
+        console.log(arr);   //1234567tt
+
+        console.log(arr1.pop());//删除数组最后一个元素  返回 被删除的元素 ee
+        console.log(arr1); //aa bb cc dd
+
+        console.log(arr2.unshift(00,'zz'));  //数组开头添加 元素 返回数组长度
+        console.log(arr2);  //0 zz 1a 2b 3c 4d
+
+        console.log(arr3.shift());//删除数组第一个元素 返回被删除元素
+        console.log(arr3);  //22 33 44 55
+    </script>
+
+</head>
+<body>
+    
+    <div> <img src="images/数组增删.jpg" alt=""></div>
+</body>
+</html>
