@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒泡</title>
+
+
+    <script>
+
+        var arr=[12,55,66,82,22,36,49,99];
+        
+        for(var i=0;i<arr.length-1;i++){
+                for(var j=0; j<arr.length-1;j++){
+                    if(arr[j]>arr[j+1]){
+                        var temp = arr[j]
+                        arr[j] = arr[j+1]
+                        arr[j+1] = temp
+                    }
+                }
+        }
+        console.log(arr);
+
+    </script>
+
+    <style>
+        div img{
+            width: 1000px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div><img src="images/maopao.jpg" alt=""></div>
+</body>
+</html>

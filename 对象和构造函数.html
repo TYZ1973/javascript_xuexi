@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 方法 object
+    //     var tts={
+    //         uname:'aa',
+    //         age:25,
+    //         sayHi:function() {
+    //             console.log('hi');
+    //         }
+    //     }
+
+    // console.log(tts.name);
+    // console.log(tts['age']);
+       
+        // 构造函数+方法创建
+            // function 构造函数名(){
+            //     this.属性=值;
+            //     this.方法=function(){
+            //     }
+            // }
+            // -----------------------------------
+            //构造函数 构造一个标准模型  然后用new 来创建相应的对象   
+            // 类似于把某种对象的相同点收集起来然后批量创建某种对象
+            //通过构造函数创造对象的过程称为-对象的实例化
+            function Player(name,age,level){
+                this.name=name;
+                this.age=age;
+                this.level=level;
+                this.play=function(game){
+                    console.log(game);
+                };
+            }
+            var tt1 = new Player('aab','23','2');
+            console.log(tt1.age);
+            tt1.play('dada');
+
+    </script>
+
+
+</head>
+
+<body>
+    <div><img src="images/gouzao.jpg" alt=""></div>
+</body>
+</html>

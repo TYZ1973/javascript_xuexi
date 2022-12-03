@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function countDown(time){
+            var nowTime = +new Date(); //代表当前时间距离1970年的毫秒数
+            var inputTime = +new Date(time);//输入一个截止时间点
+            var timer = (inputTime-nowTime)/1000; //把毫秒转换成剩余时间的总秒数
+            var d=parseInt(timer / 60 / 60 / 24); //day
+            d = d < 10? '0' + d : d;    //小于10的时候时间前面+0 
+            var h = parseInt(timer / 60 / 60 % 24);//hour
+            h = h < 10? '0' + h : h;     //小于10的时候时间前面+0 
+            var m =parseInt(timer /60 % 60);//分
+            m = m < 10? '0' + m : m;     //小于10的时候时间前面+0 
+            var s = parseInt(timer % 60);//秒
+            s = s < 10? '0' +s :s;       //小于10的时候时间前面+0 
+            return d + '天' + h + '时' + m +'分' + s + '秒';
+
+        }
+        console.log(countDown('2022-12-3 03:00:00'));
+        var date = new Date();
+        console.log(date);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
