@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //charAt(index) 根据位置 返回字符， 比如 abcde  那么 charAt(0) 就是 a.
+        var str = 'abcdef'
+        console.log(str.charAt(0));
+
+        for(var i=0; i<str.length; i++){
+            console.log('charAt输出: '+str.charAt(i));
+        }
+
+        for(var i=0; i<str.length; i++){
+            console.log('charCodeAt输出 '+str.charCodeAt(i));     //ASCII码
+        }
+
+        for(var i=0; i<str.length; i++){
+            console.log('html5的str[index]输出：' + str[i]);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <script>
+
+            var str = "xyoiuohhjohhbnoopookkoo";
+            var obj={};
+            for(var i = 0 ; i < str.length ; i++){
+                var chars = str.charAt(i);  //charAt 的输出是位置上的元素,  把这些位置依次赋值给chars，
+                if(obj[chars]){               //这里类似于 对象o.o or o['o'] , 所以 if(o[chars]) 返回值是true flase，
+                    obj[chars]++;             //此时发现了下一个 o, if判断为true 然后  o={o:1就变成了 o:2}
+                }else{
+                    obj[chars]=1;         //一开始，if的结果是flase 所以从else开始给 o={} 里面添加内容，比如o={x:1,y:1,o:1,i:1,u:1},直到发现下一个o 此时if 是 true
+                }   //第一次 chatAt(0), 输出 x, 所以 chars = 'x', 然后 obj[chars]等同于chars['x'], 判断得出 obj内没有x，
+                    // 所以是flase，然后else 给x赋值为1 这样下次找到同样的x时，if判断为true obj里的x的值就+1 这样就可以得到所有元素出现的次数
+            } 
+            console.log(obj);        
+            var max = 0 ;          // max 用来存出现最多元素的次数
+            var k = '';            //k 用来存出现最多元素的元素名
+            for(var key in obj){
+                if(max<obj[key]){
+                    max=obj[key];   //loop停止前得到的key 就是出现次数最多的元素
+                    k=key;
+                }
+            }
+            console.log(k+' 出现的次数最多，次数为： '+max);
+            
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

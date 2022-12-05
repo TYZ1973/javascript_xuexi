@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    var str ="a5f1vb32d16456we1t3w1eetr5yfgju6564itg1jh23gvn1bf5sd21ggggg"
+    var str2 ="abcdefgabcabcdddttg"
+        var index = str.indexOf('g');
+        var num=0;
+
+        while(index !== -1){        //找不到就是 -1 就停止了， num停止增加
+            console.log("g 出现的位置: "+index);
+            num++;                              //记录找到的次数
+            index = str.indexOf('g',index+1);//假如找到第一个以后 index的值就变成了找到时的位置 比如时20，然后我们把index 值+1 ，就表示从第21个开始继续寻找.
+
+        }
+        console.log('g出现次数: ' + num);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

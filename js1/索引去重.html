@@ -8,13 +8,14 @@
     <script>
         // var arr = ['aa','bb','cc','dd','aa']
         // console.log(arr.indexOf('aa'));     //aa 的第一个索引
+        // console.log(arr.indexOf('aa',3));     //aa 的第一个索引 从位置3 开始
         // console.log(arr.lastIndexOf('aa')); // aa 的最后一个索引
-
+        
         
         function unique(arr){
             var newArr = [];
             for(var i =0 ; i < arr.length ;i++){
-                if(newArr.indexOf(arr[i]) === -1){
+                if(newArr.indexOf(arr[i]) === -1){   // 新数组 newarr 从数组 arr的第一个元素开始查找，如果返回值为-1 表示没找到，然后就把这个元素存进newarr里
                     newArr.push(arr[i]);
                 }
             }
@@ -22,9 +23,9 @@
         }
         var demo = unique(['tt','qq','ww','ff','ff','ww','ww','cc','dd','cc','aa']);
         var demo2 = unique(['AA','CC','AA']);
-        var ss = demo.sort();
+        // var ss = demo.sort();
 
-        console.log(ss);
+        console.log(demo);
     </script>
     
 

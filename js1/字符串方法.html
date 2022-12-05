@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // concat(str1,str2,str3)
+        //substr(start,length)
+        //slice(start,end)
+        //substring(start,end)
+
+        var str = "xxx";
+        var str1 = "yyyuuuiiiooo";
+        var str2 = "abcdefg";
+        var str3 = 'av,ab,ac,vc,vb,vv,bb,aa';
+        console.log(str.concat('ttt')); // 等同于 console.log (str + 'ttt')  输出结果 xxxttt
+        console.log(str1.substr(2,4)); //表示从str1中从第二个开始获取 获取4个字符  输出结果为 yuuu
+        console.log(str2.slice(0,5));   // 从0开始 到5 结束， 结果为 abcde
+
+        //replace('被替换', '替换为')
+        //split('分隔符')   字符串 转换为数组                                join() 把数组转换为字符串
+        console.log(str2.replace('a','b'));
+        while(str2.indexOf('u') !==-1){      //把str2里所有存在的u都转化为*
+            str2=str2.replace('u','*')
+        }
+        console.log(str3.split(','));      //原字符串用的是逗号分隔符所以这里也需要用逗号
+    </script>
+</head>
+<body>
+    <img src="images/字符串1.jpg" alt="">
+</body>
+</html>
