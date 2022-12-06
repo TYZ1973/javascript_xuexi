@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div ,.timer{
+            background-color: palegoldenrod;
+            width: 300px;
+            height: 100px;
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <button>获取时间</button>
+    <div>时间显示在这里</div>
+    <div class="timer"></div>
+
+
+    <script>
+
+        var btn =document.querySelector('button');
+        var div = document.querySelector('div');
+        btn.onclick = function(){
+            div.innerHTML= getDate();
+        }
+
+        function getDate(){
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth()+1;
+            var dates = date.getDate();
+            var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+            var day = date.getDate();
+            return '今天是 '+year+' 年 '+month+' 月 '+dates+' 日 '+arr[day] }
+
+            var timer = document.querySelector('.timer');
+            window.onload= function(){
+                timer.innerHTML=getDate();
+            }
+    </script>
+</body>
+
+
+</html>

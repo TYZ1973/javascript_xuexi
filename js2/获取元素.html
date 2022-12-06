@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">盒子</div>
+    <div class="box">盒子2</div>
+    <div id="nav">
+        <ul>
+            <li>li一号</li>
+            <li>li二号</li>
+        </ul>
+    </div>
+    <script>
+        // document.getElementsByClassName('')
+        var boxs = document.getElementsByClassName('box');
+        console.log(boxs);
+        //document.querySelector(' ') 返回的是第一个元素对象 .box 选 class，   #nav 选 id
+        var firstBox = document.querySelector('.box');
+        console.log(firstBox);
+        var nav = document.querySelector('#nav')
+        //document.querySelectorAll()  指定选择器的所有对象 
+        var allbox = document.querySelectorAll('.box');
+        console.log(allbox);
+
+        //document.body  获取body 元素
+        var bodyElem = document.body;
+        //document.documentElement; 获取 html元素
+        var htmlElem = document.documentElement;
+        
+    </script>
+</body>
+
+</html>

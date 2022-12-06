@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img{
+
+            width: auto;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <img src="../images/dom.png" alt="">
+
+    <div id="didi" class="dicla">1111</div>
+
+    <ul>
+        <li>一堆li里面的字</li>
+        <li>一堆li里面的字</li>
+        <li>一堆li里面的字</li>
+        <li>一堆li里面的字</li>
+        <li>一堆li里面的字</li>
+    </ul>
+
+    <ol id="ol">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <script>
+        
+        var a = document.getElementById("didi");
+        a.innerHTML='wowowo';
+        console.log(typeof a);
+        console.dir(a);
+
+        //返回的是   获取元素对象的集合  以伪数组的形式储存
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        for(var i =0 ; i < lis.length; i++){
+            console.log(lis[i]);
+        }
+        var ol = document.getElementById('ol');
+        console.log(ol.getElementsByTagName('li'));
+
+    </script>
+</body>
+
+</html>
