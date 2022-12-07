@@ -6,9 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    
+
 </head>
 <body>
-    
+        <div class="box">
+            <span class="erweima">x</span>
+        </div>
+
+            <div>
+                <ul>
+                    <li>li1</li>
+                    <li>li2</li>
+                    <li>li3</li>
+                    <li>li4</li>
+                    <li>li5</li>
+                </ul>
+
+                <ol>
+                    <li>olli1</li>
+                    <li>olli2</li>
+                    <li>olli3</li>
+                    <li>olli4</li>
+                    <li>olli5</li>
+                </ol>
+            </div>
+        <script>
+            var erweima = document.querySelector('.erweima');
+            console.log(erweima.parentNode);  // 效果类似于  var box = document.querySelector('.box');
+            //得到离元素最近的一个父节点  
+            var ul = document.querySelector('ul');
+            ul.childNodes;
+            console.log(ul.childNodes);
+            console.log(ul.childNodes[0].nodeType);
+            console.log(ul.childNodes[1].nodeType);
+            console.log(ul.children);  //获得元素节点
+
+            //nodetype   文本 3   属性2  元素1  
+
+            var ol = document.querySelector('ol');
+
+            console.log(ol.firstChild);//获得任意子节点
+            console.log(ol.lastChild);//获得任意子节点
+            console.log(ol.firstElementChild);//获得元素子节点
+            console.log(ol.lastElementChild);//获得元素子节点
+            console.log(ol.children[0]); //获得元素子节点
+            console.log(ol.children[ol.children.length-1]);//获得元素子节点
+       </script>
 </body>
 </html>
