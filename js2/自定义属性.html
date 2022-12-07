@@ -7,26 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+    <!-- H5 规范  自定义属性要用 data-开头  比如 data-index， 获得自定义属性的方法是  div.getAttribute('data-index')   div.setAttribute('data-index',2)-->
+    <!-- div.dataset.index     ,  自定义属性 data-list-name ,  div.dataset.listName or  div.dataset['listName']-->
 
 <body>
-    <div id="demo" index="1" class="nav"></div>
+    <div id="demo" data-index="1" class="nav"></div>
     <script>
         var div = document.querySelector('div');
         // 1. 获取元素的属性值
         // (1) element.属性
         console.log(div.id);
-        //(2) element.getAttribute('属性')  get得到获取 attribute 属性的意思 我们程序员自己添加的属性我们称为自定义属性 index
+        //(2) element.getAttribute('属性')  get得到获取 attribute 属性的意思 我们程序员自己添加的属性我们称为自定义属性 data-index=""
         console.log(div.getAttribute('id'));
-        console.log(div.getAttribute('index'));
+        console.log(div.getAttribute('data-index'));
         // 2. 设置元素属性值
         // (1) element.属性= '值'
         div.id = 'test';
         div.className = 'navs';
         // (2) element.setAttribute('属性', '值');  主要针对于自定义属性
-        div.setAttribute('index', 2);
+        div.setAttribute('data-index=', 2);
         div.setAttribute('class', 'footer'); // class 特殊  这里面写的就是class 不是className
         // 3 移除属性 removeAttribute(属性)    
-        div.removeAttribute('index');
+        div.removeAttribute('data-index=');
     </script>
 </body>
 
