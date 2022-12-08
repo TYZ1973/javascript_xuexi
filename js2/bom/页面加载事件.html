@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //两种方法都可以   方法1 只能写一个  写多了只执行最后一个 等页面所有元素加载完毕之后执行 比如 样式 图片 flash 等等 
+        // window.onload=function(){
+
+        // }
+        //方法2 随便写  个数不限   等页面所有元素加载完毕之后执行 比如 样式 图片 flash 等等 
+        // window.addEventListener('load',function(){
+        // })
+
+        // 仅当 DOM加载完成后 执行 ， 不包括 样式 图片 flash 等等  ， 比如网页有很多图片 建议用这个， 不然等所有加载完毕了再执行 太慢了
+        // document.addEventListener('DOMContentLoaded',function(){
+        // })
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

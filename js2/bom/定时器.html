@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <img src="bomImages/定时器.jpg" alt="">
+        <script>
+            // setTimeout(function(){
+            //     console.log('setTimeout(function(),2000)');
+            // },2000)
+
+
+            //  function callback() { 
+            //     console.log('我来了');
+            //   }
+
+            //   setTimeout(callback,2000);
+
+            //   setTimeout('callback()',2000);+
+
+
+            setTimeout(function(){
+                setTimeout(function(){
+                    setTimeout(function(){
+
+                        console.log('setTimeout(function(),4000)');
+                    },4000)
+                    console.log('setTimeout(function(),3000)');
+                },3000)
+                console.log('setTimeout(function(),2000)');
+            },2000)
+        </script>    
+</body>
+</html>

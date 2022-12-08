@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            float: right;
+            width: 100px;
+            height: 100px;
+            border: 1px springgreen solid;
+        }
+    </style>
+</head>
+<body>
+    <img src="bomImages/定时器.jpg" alt="" class="ad">
+    <div>aaa</div>
+    <script>
+        var ad  = document.querySelector('.ad');
+        var div = document.querySelector('div');
+        setTimeout(function(){
+            console.log('5秒图消失');
+            ad.style.display='none';
+        },5000)
+
+        // setTimeout(function(){
+        //     div.innerHTML='1';
+        // setTimeout(function(){
+        //     div.innerHTML='2';
+        // setTimeout(function(){
+        //     div.innerHTML='3';
+        // setTimeout(function(){
+        //     div.innerHTML='4';
+        // setTimeout(function(){
+        //     div.innerHTML='5';
+        // },1000)
+        // },1000)
+        // },1000)
+        // },1000)
+        // },1000)
+
+        
+            var i=5;
+            var xx = function(){
+                div.innerHTML=i;
+                if(i>0){
+                setTimeout(xx,1000);  //这里调用了好几次 xx方程
+            }
+             i--;
+        };
+        xx();
+    
+        // var i=5;
+        //   var tt= function xx(){      //tt 有啥用?
+        //         div.innerHTML=i;
+        //         if(i>0){       
+        //        setTimeout(function(){
+        //             console.log(i);
+        //             xx();
+        //         },1000);      
+        //     }
+        //      i--;
+        // }();
+       
+        
+        // var i=5;
+        //   var xx = function (){
+        //         div.innerHTML=i;
+        //         if(i>0){       
+        //        setTimeout(function(){
+        //             console.log(i);
+        //             xx();
+        //         },1000);      
+        //     }
+        //      i--;
+        // };
+        // xx();
+    
+
+        
+    </script>
+</body>
+</html>
