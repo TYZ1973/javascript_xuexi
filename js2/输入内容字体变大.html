@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .search {
+            position: relative;
+            width: 178px;
+            margin: 100px;
+        }
+        
+        .con {
+            display: none;
+            position: absolute;
+            top: -40px;
+           width: 200px;
+            border: 1px solid rgba(0, 0, 0, .2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+            padding: 5px 0;
+            font-size: 18px;
+            line-height: 20px;
+            color: #333;
+        }
+        
+        .con::before {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 28px;
+            left: 18px;
+            border: 8px solid #000;
+            border-style: solid dashed dashed;
+            border-color: #fff transparent transparent;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<div class="search">
+    <div class="con"></div>
+    <input type="text" placeholder="输入" class="jd">
+</div>
+
+<script>
+    var con = document.querySelector('.con');
+    var jd_input = document.querySelector('.jd');
+
+    jd_input.addEventListener('keyup',function(e){  //在键盘弹起的时候判定
+        if(this.value==''){                        //输入框为空 不显示
+            con.style.display='none';    
+        }else{                                     //输入框不为空 显示input的value到悬浮小窗口内  
+        con.style.display='block';
+        con.innerHTML = this.value;
+        }
+    })
+
+    jd_input.addEventListener('blur',function(){
+        con.style.display='none';
+    })    //失去焦点隐藏
+    jd_input.addEventListener('focus',function(){
+        if(jd_input.value !=='')   //获得焦点且不为空显示
+        con.style.display='block';
+    })
+
+</script>
+</html>

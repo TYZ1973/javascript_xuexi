@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <input type="text">    
+    <script>
+//         document.addEventListener('keyup',function(e){
+//             console.log(e);
+//             console.log('keyup: '+e.keyCode);
+// })
+//             document.addEventListener('keydown',function(e){
+//             console.log(e);
+//             console.log('keydown: '+e.keyCode);
+// })
+//             document.addEventListener('keypress',function(e){
+//             console.log(e);
+//             console.log('keypress: '+e.keyCode);
+//         })
+//          // keydown 和 keypress 的区别     keypress 不支持 功能键  比如 ctrl  shift
+//         //keyup 和 keydown 的 keycode 不区分大小写 ， A 和 a 返回值相同
+//         //keypress 区分大小写  A 和 a 返回值不相同
+//------------------------------
+// 搜索小案例·················
+    var search=document.querySelector('input');
+    document.addEventListener('keyup',function(e){
+             if(e.keyCode===83){
+                search.focus();
+             }
+    })
+    // 在某个网页界面任意位置 按下相应按键，此处是s 然后 就会聚焦到搜索框处
+    </script>
+</body>
+</html>

@@ -10,12 +10,23 @@
         // 面向对象oop
         // 每一个对象都是功能中心，分工明确
         // 编程 灵活 代码可复用 容易维护和开发  适合多人开发
-        // 封装性
-        // 继承性
-        // 多态性
+        // 封装性       encapsulation  
+        // 继承性       Inheritance
+        // 多态性       polymorphism        
 
-        
-
+        class Stu_{
+            constructor(width,height){
+                this.width=width;
+                this.height=height;
+            }
+            ss(name){
+                console.log('类的构造函数内的函数的输出 :'+ name );
+                console.log(name+" 的宽长分别是"+this.width+","+this.height);
+            }
+        }
+        var box1 =new Stu_(15,25);
+        console.log(box1);
+        box1.ss('firstOne');
     </script>
 </head>
 <body>
