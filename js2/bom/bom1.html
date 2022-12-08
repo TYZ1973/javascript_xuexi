@@ -18,6 +18,27 @@
     <div>
     <img src="bomImages/bom.jpg" alt="">
     <img src="bomImages/bom1.jpg" alt="">
+    <img src="bomImages/bom2.jpg" alt="">
+
+    <script>
+          // window.document.querySelector()
+          var num = 10;
+        console.log(num);
+        console.log(window.num);
+
+        function fn() {
+            console.log(11);
+        }
+        fn();         //  省略了 window
+        window.fn();  // 上面省略了 window
+        // alert(11);
+        // window.alert(11)
+        console.dir(window);
+        // var name = 10;   //不要这么写  因为window有内置对象 name
+        console.log(window.name);
+
+        //document 其实是包含在 window 对象内的
+    </script>
 </div>
 </body>
 </html>
