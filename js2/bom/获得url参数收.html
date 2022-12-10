@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+        <script>
+              console.log(location.search);
+              var div = document.querySelector('div');
+              var something = location.search.substr(1); //获得输入截取string
+              var para = something.split('=');      //string 转 array  且用 = 作为分隔符
+            //    console.log(para[1]);
+               div.innerHTML='输入的内容为: ' +para[1];
+        </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .box-o {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        margin: 150px;
+    }
+    
+    .box-i {
+        width: 100px;
+        height: 100px;
+        background-color: purple;
+        margin-left: 45px;
+    }
+    
+    .w {
+        height: 200px;
+        width: 500px;
+
+        
+        background-color: skyblue;
+        margin: 0 auto 200px;
+        padding: 10px;
+        border: 15px solid red;
+    }
+</style>
+</head>
+<body>
+    <div class="box-o">
+        <div class="box-i"></div>
+    </div>
+<div class="w"></div>
+    <script>
+        var outs = document.querySelector('.box-o');
+        var ins = document.querySelector('.box-i');
+        var w = document.querySelector('.w');
+        console.log(outs.offsetTop);
+        console.log(outs.offsetLeft);
+
+        console.log(ins.offsetTop);
+        console.log(ins.offsetLeft);
+
+        console.log(w.offsetWidth);
+        console.log(w.offsetHeight);
+
+        console.log(outs.offsetParent);  //自动一级一级往上
+        console.log(outs.parentNode);   //只找上一级 
+    </script>
+</body>
+</html>

@@ -63,6 +63,7 @@
         //     clearInterval(timer);
         // })
         setInterval(countDown, 1000)
+        
         function countDown() {
             var nowTime = +new Date(); // 返回的是当前时间总的毫秒数
             var times = (inputTime - nowTime) / 1000; // times是剩余时间总的秒数 
@@ -75,6 +76,7 @@
             var s = parseInt(times % 60); // 当前的秒
             s = s < 10 ? '0' + s : s;
             second.innerHTML = s;
+
 
             if(inputTime - nowTime <= 0){
                 clearInterval(timer);

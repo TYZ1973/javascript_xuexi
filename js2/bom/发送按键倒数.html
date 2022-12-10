@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <input type="number"  >
+    <button>sent</button>        
+
+    <script>
+
+            var btn = document.querySelector('button');
+            time = 3;
+            btn.addEventListener('click',function(){
+                // btn.disabled =true;
+                var count = setInterval(function(){
+                    if(time<0){
+                    clearInterval(count);
+                    btn.innerHTML='sent';
+                    btn.disabled=false;
+                    time=3;
+                }else{
+                    btn.disabled =true;
+                    btn.innerHTML='还剩下'+ time+'秒'
+                    time--;} ;
+                },1000);       
+            })
+
+    </script>
+</body>
+</html>

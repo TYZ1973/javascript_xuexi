@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .box-m{
+            width: 500px;
+            height: 282px;
+        } */
+        .box-l{
+            
+            position: fixed;
+            left: 100px;
+            top: 100px;
+            height: 282px;
+            border: 1px solid black;
+           
+        }
+        .xiao{
+           
+        }
+        .box-r{
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 510px;
+            overflow: hidden;
+            width: 400px;
+            height: 400px;
+            z-index: 999;
+            border: 1px solid #ccc;
+        }
+        .box-r img{
+           
+           position: absolute;
+            top: 0px;
+            left: 0px;
+            
+   
+        }
+        .cover{
+            display: none;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 0;
+            left: 0;
+            
+            background-color: rgba(236, 234, 195,0.6);
+            /* transform: translate(-50%,-50%); */
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-m">
+    <div class="box-l">
+        <img src="imgg/7s.jpg" alt="" class="xiao">
+        <div class="cover"></div>
+        <div class="box-r">
+        <img src="imgg/7b.jpg" alt="" class="da">
+    </div>
+    </div>
+    
+    </div>    
+
+    <script>
+
+        var boxM=document.querySelector('.box-m');
+        var boxL=document.querySelector('.box-l');
+        var boxR=document.querySelector('.box-r');
+        var imgX=document.querySelector('.xiao');
+        var imgY=document.querySelector('.da');
+        var cover=document.querySelector('.cover');
+
+        // window.addEventListener('load',function(){
+
+        // })
+        boxL.addEventListener('mouseover',function(){
+            cover.style.display='block';
+            boxR.style.display='block';
+        })
+        boxL.addEventListener('mouseout',function(){
+            cover.style.display='none';
+            boxR.style.display='none';
+        })
+        boxL.addEventListener('mousemove',function(e){
+            var x = e.pageX - this.offsetLeft;
+            var y = e.pageY - this.offsetTop;
+           
+            var coverX=x-cover.offsetWidth/2;
+            var coverY=y-cover.offsetHeight/2;
+            var maxCoverX=boxL.offsetWidth-cover.offsetWidth;
+            var maxCoverY=boxL.offsetHeight-cover.offsetHeight;
+            // console.log(coverX);
+            // console.log(coverY);
+            if(coverX<=0){
+                coverX =0 ;
+            }else if(coverX>=maxCoverX){
+                coverX=maxCoverX;
+            };
+
+            if(coverY<=0){
+                coverY =0 ;
+            }else if(coverY>=maxCoverY){
+                coverY=maxCoverY;
+            };
+
+
+            cover.style.left= coverX+ 'px';
+            cover.style.top=coverY+ 'px';
+        
+    
+
+        var maxRx=imgY.offsetWidth - boxR.offsetWidth;
+        var maxRy=imgY.offsetHeight - boxR.offsetHeight;
+        
+        var daX= coverX * maxRx/maxCoverX;
+        var daY= coverY * maxRy/maxCoverY;
+
+        imgY.style.left = -daX + 'px';
+        imgY.style.top = -daY + 'px';
+
+            console.log(-daX);
+            console.log(-daY);
+             })   
+   </script>
+</body>
+</html>

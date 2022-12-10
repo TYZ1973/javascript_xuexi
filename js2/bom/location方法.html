@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d3{
+
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <button class="b1">点击location.assign</button>
+    <p> 跟herf 一样 跳转页面 且保存历史记录可以返回</p>
+    </div>
+
+    <div>
+    <button class="b2">点击location.replace</button>
+    <p>替换当前页面 不可以返回</p>
+    </div>  
+
+    <div class="d3">
+    <button class="b3">点击location.reload</button>
+    <p>reload 等同于F5， 如果给一个参数 true  等同于 ctrl+F5 的强制刷新 , 1秒变粉色 刷新后变成1秒内蓝色</p>
+    </div>     
+    
+    
+
+    <script>
+        var btn1=document.querySelector('.b1');
+        var btn2=document.querySelector('.b2');
+        var btn3=document.querySelector('.b3');
+        var d3=document.querySelector('.d3');
+        btn1.addEventListener('click',function(){
+            location.assign('https://www.google.com');
+        });
+        btn2.addEventListener('click',function(){
+           location.replace('https://www.google.com');
+        });
+        btn3.addEventListener('click',function(){
+             location.reload();
+        });
+        
+        setTimeout(function(){
+             d3.style.backgroundColor = 'pink';
+        },1000)
+    
+       
+    </script>
+</body>
+</html>
