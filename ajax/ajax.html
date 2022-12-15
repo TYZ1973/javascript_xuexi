@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="jquery.min.js"></script>
+    <style>
+        div ul li{
+                margin-top: 10px;
+                text-decoration: none;
+                list-style: none;
+        }
+        div ul{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><button id="btnajg">ajaxGET按钮</button></li>
+            <li><button id="btnajp">ajaxPOST按钮</button></li>
+        </ul>
+        
+    </div>
+
+
+    
+    <script>
+        // $.ajax({
+        //     type:'', //请求方式  get or post
+        //     url:'', //url
+        //     data:{ },//请求携带的数据
+        //     success:function(e){} //请求成功之后的回调函数
+        // })
+        $('#btnajg').on('click',function(){
+
+            $.ajax({
+                type:'GET',
+                url:'http://www.liulongbin.top:3006/api/getbooks',
+                data:{id:1},
+                success:function(response){
+                    console.log(response);
+                }
+            })
+        })
+
+        $('#btnajp').on('click',function(){
+
+    $.ajax({
+    type:'POST',
+
+    url:'http://www.liulongbin.top:3006/api/addbook',
+
+    data:{bookname:'ooppoo',
+            author:'kkllkk',
+        publisher:'mmnnmm'},
+
+         success:function(response){
+        console.log(response);
+    }
+})
+})
+    </script>
+
+</body>
+</html>
