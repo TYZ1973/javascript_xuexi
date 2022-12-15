@@ -79,6 +79,29 @@
                     getBookList();
                 })
             })
+
+            $('#btnAdd').on('click',function(){
+                var bookname = $('#iptBookname').val()
+                var author = $('#iptAuthor').val()
+                var publisher = $('#iptPublisher').val()
+
+                if(bookname.length<=0 || author.length<=0 || publisher.length<=0){
+                    return alert('请正确填写')
+                }
+                $.post('http://www.liulongbin.top:3006/api/addbook',
+                {
+                    bookname: bookname,
+                    author: author,
+                    publisher: publisher
+                }, function(res){
+                    if(res.status !== 201) return alert('添加失败')
+                    getBookList()
+                    $('#iptBookname').val('')
+                    $('#iptAuthor').val('')
+                    $('#iptPublisher').val('')
+
+                })
+            })
         })
     </script>
 
