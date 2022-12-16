@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+    <!-- XMLHttpRequest  - xhr  浏览器提供的JavaScript对象，通过它可以请求服务器上的数据资源 -->
+
+    <script>
+   
+        // -----------------------------------------------
+        //带参数的GET
+        //创建xhr对象
+        var xhr = new XMLHttpRequest();
+        //调用open函数， 指定 请求方式 与 url地址 , 在url后面加 问号 ? 再加参数， 这个叫做查询字符串
+        xhr.open('GET','http://liulongbin.top:3006/api/getbooks?id=1&bookname=西游记')
+        //调用send ，发起 ajax请求
+        xhr.send();
+        //监听 onreadystatechange 事件
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState === 4 && xhr.status ===200){
+                console.log(xhr.responseText);
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>
