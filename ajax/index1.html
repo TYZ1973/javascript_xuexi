@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+
+    <!-- jquery 版本的  ajax  get & post -->
+</head>
+<body>
+    <button id="btnget">发送无参数GET请求</button>
+    <button id="btnget1">发送单一参数GET请求</button>
+    <button id="btnpost">发送POST请求</button>
+    
+    <script>
+        $(function(){
+
+            $('#btnget').on('click',function(){
+                $.get('http://www.liulongbin.top:3006/api/getbooks',function(res){
+                    $.each(res.data, function(i,item){
+                    console.log(item.bookname);
+                    })
+                })
+            })    
+            $('#btnget1').on('click',function(){
+                $.get('http://www.liulongbin.top:3006/api/getbooks', {id: 1}, function(res1){
+                    // console.log(res1);   
+                    var dd = res1.data;
+                     console.log(dd[0].bookname);
+                })
+            })        
+            
+            $('#btnpost').on('click',function(){
+                $.post(
+                    'http://www.liulongbin.top:3006/api/addbook',
+                     {bookname: 'xxx', author: 'ttt' , publisher:'yyy'},
+                     function(res2){
+                    console.log(res2);   
+                })
+            })        
+            
+       })
+    </script>
+</body>
+</html> 
