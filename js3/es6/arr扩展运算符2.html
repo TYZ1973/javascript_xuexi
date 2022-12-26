@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        let oDivs = document.getElementsByTagName('div');
+        console.log(oDivs);  //HTMLCollection(3) [div, div, div]  伪数组
+        var arr = [...oDivs];
+        console.log(arr);   //(3) [div, div, div]   真正的数组
+        arr.push('a')
+        console.log(arr);   //(4) [div, div, div, 'a']
+    </script>
+</body>
+</html>

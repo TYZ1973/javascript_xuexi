@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let person = { name : 'mingzi' , age : 30};
+        //数据
+        let {name,age} = person;
+        console.log(name);
+        console.log(age);
+        //上下两种方式都可以
+
+        let{name : myName, age : myAge} = person;  //可以解构任意数量的数据 比如值要名字  后面的age 就不需要写了
+        console.log(myName);
+        console.log(myAge);
+        </script>
+</body>
+</html>

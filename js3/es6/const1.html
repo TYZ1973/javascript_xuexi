@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src="imgg/letconst.jpg" alt="">
+    </div>
+    <script>
+        const PI =3.14;
+       // PI=100;   // Assignment to constant variable.  //const 声明的常量 值是不可以修改的  、、常量值对应的内存地址 
+
+        const arr = [100,200];
+        arr[0] = 'a';   //  这里没有修改内存地址  只是修改了 内容 所以不报错 可以用
+        arr[1] = 'b';      //
+        console.log(arr);
+       // arr = ['a','b']  // Assignment to constant variable.  这个操作修改了 常量值对应的内存地址  不可更改
+    </script>
+</body>
+</html>
